@@ -1,5 +1,5 @@
 import Sidebar from "@/components/dashboard/Sidebar";
-import MarketOverview from "@/components/dashboard/MarketOverview";
+import MarketOverview from "@/components/MarketOverview";
 import Watchlist from "@/components/dashboard/Watchlist";
 import TopGainers from "@/components/dashboard/TopGainers";
 import TopLosers from "@/components/dashboard/TopLosers";
