@@ -1,3 +1,4 @@
+import AISignalCard from "./AISignalCard";
 import TradingViewChart from "./TradingViewChart";
 export default function Dashboard() {
   return (
@@ -33,6 +34,10 @@ export default function Dashboard() {
           <h3>SENSEX</h3>
           <p>Loading...</p>
         </div>
+        <AISignalCard
+signal="WAIT"
+confidence={0}
+/>
 <div style={{ marginTop: "30px" }}>
   <TradingViewChart />
 </div>
