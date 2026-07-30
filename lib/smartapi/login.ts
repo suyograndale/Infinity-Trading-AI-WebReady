@@ -16,13 +16,13 @@ export async function smartLogin(): Promise<SmartLoginResponse> {
 
   console.log(request);
 
-  const response = await smartApiPost(request);
+  if (!response.status) {
+  throw new Error(response.message || "SmartAPI Login Failed");
+}
 
-  console.log(response);
-
-  return {
-    jwtToken: "",
-    refreshToken: "",
-    feedToken: "",
-  };
+return {
+  jwtToken: response.data.jwtToken,
+  refreshToken: response.data.refreshToken,
+  feedToken: response.data.feedToken,
+};
 }
