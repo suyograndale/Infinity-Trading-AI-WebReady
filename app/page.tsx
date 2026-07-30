@@ -1,3 +1,4 @@
+import AISignalEngine from "@/components/AISignalEngine";
 import AIAnalysis from "@/components/AIAnalysis";
 import Dashboard from "@/components/Dashboard";
 
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <Dashboard />
       <AIAnalysis />
+      <AISignalEngine />
     </>
   );
 }
