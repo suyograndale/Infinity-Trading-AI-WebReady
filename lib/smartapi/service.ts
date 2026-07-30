@@ -11,7 +11,7 @@ export async function initializeSmartAPI() {
 
   console.log(SmartAPIEndpoints.baseUrl);
 
-  console.log("SmartAPI Ready");
+  console.log("SmartAPI Ready v2");
 
   console.log("Logged In :", session.loggedIn);
 
