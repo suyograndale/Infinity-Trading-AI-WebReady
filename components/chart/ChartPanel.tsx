@@ -1,6 +1,7 @@
 "use client";
 
 import { useMarket } from "@/hooks/useMarket";
+import TradingChart from "./TradingChart";
 
 export default function ChartPanel() {
 
@@ -87,22 +88,9 @@ export default function ChartPanel() {
 
       </p>
 
-      <div
-        style={{
-          marginTop:30,
-          height:300,
-          border:"2px dashed #374151",
-          borderRadius:10,
-          display:"flex",
-          justifyContent:"center",
-          alignItems:"center",
-          fontSize:22
-        }}
-      >
-
-        TradingView Chart Coming Soon...
-
-      </div>
+    <div style={{ marginTop: 30 }}>
+  <TradingChart />
+</div>
 
     </div>
 
