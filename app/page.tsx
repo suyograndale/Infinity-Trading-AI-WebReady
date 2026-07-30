@@ -1,3 +1,4 @@
+import MarketOverview from "@/components/MarketOverview";
 import ICTPanel from "@/components/ICTPanel";
 import AISignalEngine from "@/components/AISignalEngine";
 import AIAnalysis from "@/components/AIAnalysis";
@@ -10,6 +11,7 @@ export default function Home() {
       <AIAnalysis />
       <AISignalEngine />
       <ICTPanel />
+      <MarketOverview />
     </>
   );
 }
