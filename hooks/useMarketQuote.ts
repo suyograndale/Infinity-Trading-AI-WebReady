@@ -1,14 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getMarketQuote, MarketQuote } from "@/lib/market/marketService";
+import {
+  getMarketQuotes,
+  MarketQuote,
+} from "@/lib/market/marketService";
 
 export function useMarketQuote() {
-  const [quote, setQuote] = useState<MarketQuote | null>(null);
+  const [quotes, setQuotes] = useState<MarketQuote[]>([]);
 
   useEffect(() => {
-    getMarketQuote().then(setQuote);
+    getMarketQuotes().then(setQuotes);
   }, []);
 
-  return quote;
+  return quotes;
 }
