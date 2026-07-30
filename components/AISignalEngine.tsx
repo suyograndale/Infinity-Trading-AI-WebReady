@@ -1,23 +1,17 @@
 "use client";
+import { getLiveIndicators } from "@/lib/market/liveIndicators";
 import { generateSignal } from "@/lib/ai/signalEngine";
 
 export default function AISignalEngine() {
 
   const result = generateSignal({
 
-  price: 25240,
 
-  ema20: 25200,
+const market = getLiveIndicators();
 
-  ema50: 25160,
+const result = generateSignal(market);
 
-  rsi: 62,
 
-  macd: 18,
-
-  volume: 250000,
-
-});
   
 
 let signal = result.signal;
@@ -65,17 +59,17 @@ if (signal === "BUY PE") {
 
       <ul>
 
-        <li>Price : 25240</li>
+        <li>Price : {market.price}</li>
 
-<li>EMA20 : 25200</li>
+<li>EMA20 : {market.ema20}</li>
 
-<li>EMA50 : 25160</li>
+<li>EMA50 : {market.ema50}</li>
 
-<li>RSI : 62</li>
+<li>RSI : {market.rsi}</li>
 
-<li>MACD : 18</li>
+<li>MACD : {market.macd}</li>
 
-<li>Volume : 250000</li>
+<li>Volume : {market.volume}</li>
 
       </ul>
 
