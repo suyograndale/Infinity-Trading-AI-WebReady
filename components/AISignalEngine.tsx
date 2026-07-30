@@ -1,5 +1,5 @@
 "use client";
-import { getLiveIndicators } from "@/lib/market/liveIndicators";
+import { getIndicatorData } from "@/lib/market/indicatorEngine";
 import { generateSignal } from "@/lib/ai/signalEngine";
 
 export default function AISignalEngine() {
@@ -7,7 +7,7 @@ export default function AISignalEngine() {
  
 
 
-const market = getLiveIndicators();
+const market = getIndicatorData();
 
 const result = generateSignal(market);
 
