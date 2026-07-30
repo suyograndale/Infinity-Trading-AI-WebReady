@@ -1,3 +1,4 @@
+import ChartPanel from "@/components/chart/ChartPanel";
 import Sidebar from "@/components/dashboard/Sidebar";
 import MarketOverview from "@/components/MarketOverview";
 import Watchlist from "@/components/dashboard/Watchlist";
@@ -33,6 +34,7 @@ padding:20
 >
 
 <MarketOverview/>
+  <ChartPanel/>
 
 <div
 style={{
