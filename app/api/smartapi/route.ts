@@ -33,7 +33,17 @@ export async function POST(req: NextRequest) {
     }
   );
 
-  const data = await response.json();
-
+  if (!response.ok) {
+  return NextResponse.json(
+    {
+      status: false,
+      message: "SmartAPI Request Failed",
+    },
+    {
+      status: response.status,
+    }
+  );
+}
+const data = await response.json();
   return NextResponse.json(data);
 }
