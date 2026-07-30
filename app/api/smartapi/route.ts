@@ -17,16 +17,20 @@ export async function POST(req: NextRequest) {
         "X-SourceID": "WEB",
 
         "X-ClientLocalIP":
-          process.env.SMARTAPI_API_KEY "",
+         "X-ClientLocalIP":
+    process.env.CLIENT_LOCAL_IP || "",
 
         "X-ClientPublicIP":
-          process.env.CLIENT_PUBLIC_IP "",
+          "X-ClientPublicIP":
+  process.env.CLIENT_PUBLIC_IP || "",
 
         "X-MACAddress":
-          process.env.CLIENT_LOCAL_IP || "",
+         "X-MACAddress":
+  process.env.MAC_ADDRESS || "",
 
         "X-PrivateKey":
-          process.env.MAC_ADDRESS || "",
+        "X-PrivateKey":
+  process.env.SMARTAPI_API_KEY || "",
       },
 
       body: JSON.stringify(body),
