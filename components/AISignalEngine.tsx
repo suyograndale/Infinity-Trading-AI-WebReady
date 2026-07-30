@@ -1,26 +1,28 @@
 "use client";
-
+import { probability } from "@/lib/ai/probability";
 export default function AISignalEngine() {
 
   const rsi = 64;
   const macd = true;
   const ema = true;
 
-  let signal = "WAIT";
-  let color = "#facc15";
-  let confidence = 55;
+  const score = 82;
 
-  if (rsi > 60 && macd && ema) {
-    signal = "BUY";
-    color = "#22c55e";
-    confidence = 91;
-  }
+const result = probability(score);
 
-  if (rsi < 40 && !macd && !ema) {
-    signal = "SELL";
-    color = "#ef4444";
-    confidence = 90;
-  }
+let signal = result.signal;
+
+let confidence = result.confidence;
+
+let color = "#facc15";
+
+if (signal === "BUY") {
+  color = "#22c55e";
+}
+
+if (signal === "SELL") {
+  color = "#ef4444";
+}
 
   return (
     <div
