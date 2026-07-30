@@ -27,5 +27,5 @@ export function clearSession() {
   session.jwtToken = "";
   session.refreshToken = "";
   session.feedToken = "";
-  session.loggedIn = false;
+  session.loggedIn = false;   
 }
