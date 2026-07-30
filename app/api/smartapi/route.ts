@@ -2,28 +2,38 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
 
-  try {
+  const body = await req.json();
 
-    const body = await req.json();
+  const response = await fetch(
+    "https://apiconnect.angelone.in/rest/auth/angelbroking/user/v1/loginByPassword",
+    {
+      method: "POST",
 
-    return NextResponse.json({
-      success: true,
-      message: "SmartAPI Route Working",
-      request: body,
-    });
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
 
-  } catch {
+        "X-UserType": "USER",
+        "X-SourceID": "WEB",
 
-    return NextResponse.json(
-      {
-        success: false,
-        message: "Invalid Request",
+        "X-ClientLocalIP":
+          process.env.NEXT_PUBLIC_CLIENT_LOCAL_IP || "",
+
+        "X-ClientPublicIP":
+          process.env.NEXT_PUBLIC_CLIENT_PUBLIC_IP || "",
+
+        "X-MACAddress":
+          process.env.NEXT_PUBLIC_MAC_ADDRESS || "",
+
+        "X-PrivateKey":
+          process.env.NEXT_PUBLIC_SMARTAPI_API_KEY || "",
       },
-      {
-        status: 400,
-      }
-    );
 
-  }
+      body: JSON.stringify(body),
+    }
+  );
 
+  const data = await response.json();
+
+  return NextResponse.json(data);
 }
