@@ -19,7 +19,8 @@ export default function ICTPanel() {
     },
   ];
 
-  const ict = calculateICT(candles);
+
+const ict = calculateICT(candles);
 
   return (
     <div
