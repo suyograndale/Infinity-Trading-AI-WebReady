@@ -46,7 +46,11 @@ export default function TradingChart() {
     });
 
    
-const candleSeries = chart.addCandlestickSeries();
+import {
+  createChart,
+  ColorType,
+  CandlestickSeries
+} from "lightweight-charts";
     candleSeries.setData([
       {
         time: "2026-07-01",
