@@ -3,22 +3,27 @@ import { smartAPI } from "./client";
 import { smartLogin } from "./login";
 import { session } from "./session";
 
-
 export async function initializeSmartAPI() {
 
   const config = smartAPI.getConfig();
 
   const login = await smartLogin();
-console.log(SmartAPIEndpoints.baseUrl);
+
+  console.log(SmartAPIEndpoints.baseUrl);
+
   console.log("SmartAPI Ready");
-console.log("Logged In :", session.loggedIn);
+
+  console.log("Logged In :", session.loggedIn);
+
+  console.log("JWT :", session.jwtToken);
+
+  console.log("Feed :", session.feedToken);
+
   console.log("Authentication Layer Ready");
+
   return {
-
     config,
-
     login,
-
   };
 
 }
