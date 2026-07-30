@@ -4,7 +4,25 @@ import { calculateICT } from "@/lib/ict/ictEngine";
 
 export default function ICTPanel() {
 
-  const ict = calculateICT();
+ const candles = [
+
+  {
+    open:25000,
+    high:25040,
+    low:24980,
+    close:25020
+  },
+
+  {
+    open:25020,
+    high:25090,
+    low:25010,
+    close:25080
+  }
+
+];
+
+const ict = calculateICT(candles);
 
   return (
     <div
