@@ -1,3 +1,4 @@
+import { saveSession } from "./session";
 import { createLoginRequest } from "./request";
 import { SmartLoginResponse } from "./types";
 import { defaultAuth } from "./auth";
@@ -19,7 +20,11 @@ export async function smartLogin(): Promise<SmartLoginResponse> {
   if (!response.status) {
   throw new Error(response.message || "SmartAPI Login Failed");
 }
-
+saveSession(
+  response.data.jwtToken,
+  response.data.refreshToken,
+  response.data.feedToken
+);
 return {
   jwtToken: response.data.jwtToken,
   refreshToken: response.data.refreshToken,
