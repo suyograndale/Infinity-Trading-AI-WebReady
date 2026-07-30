@@ -1,8 +1,8 @@
 import { createLoginRequest } from "./request";
-import { SmartLoginResponse } from "./types";
+import { LoginResponse } from "./types";
 import { defaultAuth } from "./auth";
 
-export async function smartLogin(): Promise<SmartLoginResponse> {
+export async function smartLogin(): Promise<LoginResponse> {
 
   console.log("Preparing SmartAPI Login...");
 
