@@ -1,14 +1,24 @@
 "use client";
+import { generateSignal } from "@/lib/ai/signalEngine";
 import { probability } from "@/lib/ai/probability";
 export default function AISignalEngine() {
 
-  const rsi = 64;
-  const macd = true;
-  const ema = true;
+  const result = generateSignal({
 
-  const score = 82;
+  price: 25240,
 
-const result = probability(score);
+  ema20: 25200,
+
+  ema50: 25160,
+
+  rsi: 62,
+
+  macd: 18,
+
+  volume: 250000,
+
+});
+  
 
 let signal = result.signal;
 
