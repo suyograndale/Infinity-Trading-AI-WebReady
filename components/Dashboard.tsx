@@ -1,3 +1,4 @@
+import TradingViewChart from "./TradingViewChart";
 export default function Dashboard() {
   return (
     <main
@@ -32,7 +33,9 @@ export default function Dashboard() {
           <h3>SENSEX</h3>
           <p>Loading...</p>
         </div>
-
+<div style={{ marginTop: "30px" }}>
+  <TradingViewChart />
+</div>
       </div>
     </main>
   );
