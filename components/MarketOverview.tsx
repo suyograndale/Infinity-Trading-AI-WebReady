@@ -44,12 +44,24 @@ export default function MarketOverview() {
           <h1>{quote.ltp}</h1>
 
           <p
-            style={{
-              color: quote.ltp >= quote.close ? "#22c55e" : "#ef4444",
-            }}
-          >
-            {quote.ltp >= quote.close ? "+LIVE" : "-LIVE"}
-          </p>
+  style={{
+    color:
+      quote.ltp > quote.close
+        ? "#22c55e"
+        : quote.ltp < quote.close
+        ? "#ef4444"
+        : "#facc15",
+
+    fontWeight: "bold",
+    fontSize: 18,
+  }}
+>
+  {quote.ltp > quote.close
+    ? "▲ Bullish"
+    : quote.ltp < quote.close
+    ? "▼ Bearish"
+    : "▬ Neutral"}
+</p>
 
           <hr style={{ margin: "10px 0", borderColor: "#374151" }} />
 
