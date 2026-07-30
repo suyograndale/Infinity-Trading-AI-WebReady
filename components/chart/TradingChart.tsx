@@ -1,22 +1,70 @@
 "use client";
 
+import { demoCandles } from "@/lib/chart/demoData";
+
 export default function TradingChart() {
+
   return (
+
     <div
       style={{
         width: "100%",
-        height: "500px",
+        minHeight: 500,
         background: "#111827",
         border: "1px solid #374151",
-        borderRadius: "10px",
-        color: "white",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        fontSize: "24px",
+        borderRadius: 10,
+        padding: 20,
+        color: "white"
       }}
     >
-      📈 Trading Chart Ready
+
+      <h2>📈 Trading Chart Engine</h2>
+
+      <hr />
+
+      <h3>Total Candles : {demoCandles.length}</h3>
+
+      <br />
+
+      {demoCandles.map((candle, index) => (
+
+        <div
+          key={index}
+          style={{
+            padding: 10,
+            marginBottom: 10,
+            borderBottom: "1px solid #374151"
+          }}
+        >
+
+          <b>{candle.time}</b>
+
+          <br />
+
+          O : {candle.open}
+
+          <br />
+
+          H : {candle.high}
+
+          <br />
+
+          L : {candle.low}
+
+          <br />
+
+          C : {candle.close}
+
+          <br />
+
+          V : {candle.volume}
+
+        </div>
+
+      ))}
+
     </div>
+
   );
+
 }
