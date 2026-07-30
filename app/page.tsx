@@ -10,11 +10,7 @@ import FiiDiiPanel from "@/components/dashboard/FiiDiiPanel";
 import AIAnalysis from "@/components/AIAnalysis";
 import AISignalEngine from "@/components/AISignalEngine";
 import ICTPanel from "@/components/ICTPanel";
-import MarketOverview from "@/components/MarketOverview";
-import ICTPanel from "@/components/ICTPanel";
-import AISignalEngine from "@/components/AISignalEngine";
-import AIAnalysis from "@/components/AIAnalysis";
-import Dashboard from "@/components/Dashboard";
+
 
 export default function Home() {
   return (
