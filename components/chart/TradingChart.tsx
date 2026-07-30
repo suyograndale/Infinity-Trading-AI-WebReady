@@ -3,7 +3,8 @@
 import { useEffect, useRef } from "react";
 import {
   createChart,
-  ColorType
+  ColorType,
+  LineStyle
 } from "lightweight-charts";
 
 export default function TradingChart() {
