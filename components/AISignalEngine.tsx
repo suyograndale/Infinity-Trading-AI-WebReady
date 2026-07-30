@@ -4,7 +4,7 @@ import { generateSignal } from "@/lib/ai/signalEngine";
 
 export default function AISignalEngine() {
 
-  const result = generateSignal({
+ 
 
 
 const market = getLiveIndicators();
