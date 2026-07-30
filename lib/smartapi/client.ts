@@ -14,6 +14,12 @@ export class SmartAPIClient {
 
   }
 
+  async login() {
+
+    return true;
+
+  }
+
 }
 
 export const smartAPI = new SmartAPIClient();
