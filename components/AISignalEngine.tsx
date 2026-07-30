@@ -1,6 +1,6 @@
 "use client";
 import { generateSignal } from "@/lib/ai/signalEngine";
-import { probability } from "@/lib/ai/probability";
+
 export default function AISignalEngine() {
 
   const result = generateSignal({
@@ -26,11 +26,11 @@ let confidence = result.confidence;
 
 let color = "#facc15";
 
-if (signal === "BUY") {
+if (signal === "BUY CE") {
   color = "#22c55e";
 }
 
-if (signal === "SELL") {
+if (signal === "BUY PE") {
   color = "#ef4444";
 }
 
@@ -65,11 +65,17 @@ if (signal === "SELL") {
 
       <ul>
 
-        <li>RSI : {rsi}</li>
+        <li>Price : 25240</li>
 
-        <li>MACD : {macd ? "Bullish" : "Bearish"}</li>
+<li>EMA20 : 25200</li>
 
-        <li>EMA : {ema ? "Bullish" : "Bearish"}</li>
+<li>EMA50 : 25160</li>
+
+<li>RSI : 62</li>
+
+<li>MACD : 18</li>
+
+<li>Volume : 250000</li>
 
       </ul>
 
