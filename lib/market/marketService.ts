@@ -1,3 +1,7 @@
+function randomMove(price: number) {
+  const move = (Math.random() - 0.5) * 20;
+  return Number((price + move).toFixed(2));
+}
 export interface MarketQuote {
   symbol: string;
   ltp: number;
