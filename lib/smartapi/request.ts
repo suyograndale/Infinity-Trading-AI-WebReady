@@ -1,10 +1,9 @@
 import { SmartAPIConfig } from "./config";
 
-export async function createLoginRequest() {
-
+export function createLoginRequest() {
   return {
-    apiKey: SmartAPIConfig.apiKey,
-    clientCode: SmartAPIConfig.clientCode,
+    clientcode: SmartAPIConfig.clientCode,
+    password: SmartAPIConfig.password,
+    totp: SmartAPIConfig.totp,
   };
-
 }
