@@ -7,7 +7,7 @@ export async function smartLogin(): Promise<SmartLoginResponse> {
   console.log("Preparing SmartAPI Login...");
 
   defaultAuth.isLoggedIn = false;
-const request = await createLoginRequest();
+const request = createLoginRequest();
 
 console.log(request);
   return {
