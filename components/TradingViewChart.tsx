@@ -16,7 +16,7 @@ export default function TradingViewChart() {
 
     script.innerHTML = JSON.stringify({
       autosize: true,
-      "symbol": "NSE:NIFTY50",
+      "symbol": "NSE:NIFTY1!",
       interval: "5",
       timezone: "Asia/Kolkata",
       theme: "dark",
