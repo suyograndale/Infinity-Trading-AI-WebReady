@@ -1,5 +1,5 @@
 "use client";
-
+import CandleChart from "./CandleChart";
 import { demoCandles } from "@/lib/chart/demoData";
 
 export default function TradingChart() {
@@ -61,7 +61,9 @@ export default function TradingChart() {
 
         </div>
 
-      ))}
+      ))}  <div style={{ marginTop: 30 }}>
+  <CandleChart />
+</div>
 
     </div>
 
