@@ -1,11 +1,20 @@
 import { smartAPI } from "./client";
+import { smartLogin } from "./login";
 
-export function initializeSmartAPI() {
+export async function initializeSmartAPI() {
 
   const config = smartAPI.getConfig();
 
+  const login = await smartLogin();
+
   console.log("SmartAPI Ready");
 
-  return config;
+  return {
+
+    config,
+
+    login,
+
+  };
 
 }
