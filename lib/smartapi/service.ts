@@ -18,3 +18,4 @@ export async function initializeSmartAPI() {
   };
 
 }
+console.log("Authentication Layer Ready");
